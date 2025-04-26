@@ -74,7 +74,7 @@ header {
 
 .logo {
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     color: #21243D;
     margin: 0;
 }
@@ -112,6 +112,7 @@ section.build p {
 
 .nav-links li {
     list-style: none;
+    font-weight: bold;
 }
 
 .nav-links a {
@@ -221,7 +222,7 @@ footer {
 
 footer .footer-left p {
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #21243D;
 }
 
@@ -246,7 +247,10 @@ footer .footer-right a {
         gap: 15px;
     }
 
-    footer .footer-left,
+    footer .footer-left {
+        font-size: 1.2rem;
+    }
+
     footer .footer-center,
     footer .footer-right {
         margin: 10px 0;
@@ -304,13 +308,71 @@ footer .footer-right a {
         display: block;
         margin: 0 auto 10px;
       }
-      
+
+section.build {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  @media (min-width: 900px) {
+    .build-flex {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      max-width: 1100px;
+      margin: 40px auto 0;
+      text-align: left;
+    }
+  
+    .build-flex img {
+      max-width: 500px;
+      border-radius: 10px;
+      flex: 1 1 50%;
+    }
+  
+    .build-text {
+      flex: 1 1 50%;
+      max-width: 450px;
+    }
+  
+    .build-text h2 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #21243D;
+    }
+  
+    .build-text p {
+      color: #888888;
+      line-height: 1.4;
+      font-size: 0.95rem;
+    }
+  }
+  
+  @media (max-width: 899px) {
+    .build-flex {
+      display: block;
+      margin-top: 30px;
+    }
+  
+    .build-flex img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+  
+    .build-text {
+      text-align: center;
+      padding: 0 10px;
+    }
+  }
+
       footer {
         background-color: #CBE4DE;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 20px 40px;
+        padding: 20px 40px
         font-size: 0.9rem;
         flex-wrap: nowrap;
         gap: 20px;
@@ -318,7 +380,7 @@ footer .footer-right a {
         box-sizing: border-box;
       }
       
-      .footer-left,
+      .footer-left 
       .footer-center,
       .footer-right {
         flex: 1;
@@ -345,5 +407,3 @@ footer .footer-right a {
         margin-left: 10px;
         text-decoration: none;
       }
-      
-    }
